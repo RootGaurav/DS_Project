@@ -1,32 +1,47 @@
-# 🚀 Quick Path - Shortest Path Finder using OSM & Flask
+# Quick Path - Shortest Route Web App
 
-**Quick Path** is a Flask-based web app that allows users to find the **shortest walking route** between two locations (e.g., landmarks, streets) in **Dehradun**, India using a local `.osm` file, Dijkstra's algorithm, and Folium map visualization.
+This project is a Flask-based web app that lets you find the shortest route between two places using a local OSM file.
 
----
+## 🛠 Features
 
-## 📸 Preview
+- Uses Dijkstra's Algorithm from scratch
+- Local OSM file for map data (no Overpass API)
+- Geocoding via Nominatim
+- Visualizes routes with Folium
 
-- Input: User enters source and destination in a smart dark-themed UI.
-- Output: A rendered map showing the shortest path with markers.
+## 📦 Requirements
 
----
+- Python 3.7+
+- See `requirements.txt` for dependencies
 
-## 🧰 Features
+## 🚀 How to Run
 
-- Custom location-based pathfinding.
-- Dijkstra’s algorithm for shortest path.
-- Visual map rendering using Folium.
-- Nominatim (OpenStreetMap) for geocoding.
-- Local `.osm` file for offline processing (no Overpass needed).
-- Clean, dark-themed UI with HTML/CSS.
+1. Clone the repository:
+    ```
+    git clone https://github.com/RootGaurav/DS_Project.git
+    
+    ```
 
----
+2. (Optional) Create a virtual environment:
+    ```
+    python -m venv venv
+    venv\Scripts\activate   # On Windows
+    ```
 
+3. Install dependencies:
+    ```
+    pip install -r requirements.txt
+    ```
 
----
+4. Run the app:
+    ```
+    python app.py
+    ```
 
-It’s recommended to use a virtual environment:
+5. Open your browser and visit:
+    ```
+    http://127.0.0.1:5000/
+    ```
 
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
+## 📂 Folder Structure
+
