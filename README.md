@@ -25,16 +25,6 @@
 
 ---
 
-## 🚀 How to Run
-
-1. **Clone the repository**:
-
-   ```bash
-   git clone https://github.com/yourusername/quick-path.git
-   cd quick-path
-
-Install dependencies:
-
 It’s recommended to use a virtual environment:
 
 python -m venv venv
