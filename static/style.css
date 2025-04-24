@@ -1,0 +1,269 @@
+/* 🔄 Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+  color: #000;
+  background: #f2f2f2;
+}
+
+/* 🎥 Hero Video Section */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(65%);
+}
+
+.hero-content {
+  z-index: 1;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 30px 60px;
+  border-radius: 15px;
+  backdrop-filter: blur(4px);
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+}
+
+/* 📌 Header Navigation */
+header {
+  background: #005397;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+  color: #ffffff;
+  font-size: 2.1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.3rem;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0;
+  background: #fdfeff;
+  transition: 0.3s;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* 📢 Marquee / Announcement */
+.marquee-text {
+  background: #000000;
+  color: #ffe9e9;
+  font-size: 25px;
+  padding: 12px 0;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 1px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+/* 🌄 Main Background after marquee */
+.main-bg {
+  background-image: url('T1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-attachment: fixed;
+}
+
+/* 📦 Grid for Sections */
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  padding: 60px 30px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+/* 🧊 Section Box Style */
+.section-box {
+  background: rgba(255, 255, 255, 0.85);
+  border: 2px solid #000;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 30px auto;
+}
+
+.section-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+}
+
+.section-box h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #005397;
+}
+
+.section-box p,
+.section-box li {
+  font-size: 1.1rem;
+  color: #1c1c1c;
+  line-height: 1.6;
+}
+
+/* 🖼️ Demo Box (Bigger) */
+.section-box.demo-box {
+  max-width: 1200px;
+  padding: 50px;
+}
+
+/* 🖼️ Demo Images */
+.demo-images {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.demo-images img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.demo-images img:hover {
+  transform: scale(1.03);
+}
+
+/* 🧍 Flex Utility */
+.flex-container {
+  display: flex;
+  gap: 20px;
+}
+
+/* 🔚 Footer */
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 25px 15px;
+  text-align: center;
+  margin-top: 60px;
+  border-top: 2px solid #005397;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.footer-content p {
+  margin: 0;
+  font-weight: 400;
+}
+
+/* 🔗 Social Links */
+.social-links {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  color: #ffffff;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #0077b5; /* LinkedIn blue */
+}
+
+.social-links i {
+  margin-right: 8px;
+}
+/* 🔤 Hero Section Heading Styling */
+.hero-content h1 {
+  font-size: 5rem; /* Increase this for larger size */
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  margin-bottom: 0.5rem;
+}
+
+/* 🟦 Demo Button Styling */
+.demo-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.demo-button:hover {
+  background-color: #0056b3;
+}

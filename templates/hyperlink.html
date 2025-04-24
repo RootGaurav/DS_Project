@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shortest Path Finder</title>
+  <style>
+    body {
+      background-color: #121212;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      background-color: #1e1e1e;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+      width: 400px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #00bcd4;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: none;
+      background-color: #2e2e2e;
+      color: #ffffff;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    button {
+      width: 48%;
+      padding: 10px;
+      background-color: #00bcd4;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0097a7;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Path Finder</h1>
+    <form method="post">
+      <label for="pickup">Enter Source Location:</label>
+      <input type="text" name="pickup" id="pickup" required>
+
+      <label for="drop">Enter Destination Location:</label>
+      <input type="text" name="drop" id="drop" required>
+
+      <div class="button-group">
+        <button type="submit" name="action" value="shortest">Shortest Path</button>
+        <button type="submit" name="action" value="alternatives">Other Routes</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
